@@ -1,0 +1,17 @@
+<ion-view view-title="首页">
+  <ion-content class="padding">
+    <ion-refresher
+      pulling-text="正在努力的加载中..."
+      on-refresh="vm.doRefresh()">
+    </ion-refresher>
+
+    <div class="card text-center" ng-repeat="item in vm.items">
+      <img ng-src="{{item.url}}" alt="">
+      <div class="item item-text-wrap">
+        <h4>{{item.title}}</h4>
+      </div>
+    </div>
+
+</div>
+  </ion-content>
+</ion-view>
